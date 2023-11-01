@@ -2,7 +2,7 @@
 
 # Mark Sweeney
 
-def encoder(password):
+def encode(password):
     result = ''
     for i in range(len(password)):
         if password[i] == "7":
@@ -30,10 +30,7 @@ def main():
         elif selection == 1:
             password = input("Please enter your password to code: ")
             print("Your password has been encoded and stored!\n")
-            var = encoder(password)
-        elif selection == 2:
-            print(f"The encoded the password is {var}, and the original password is {decoder(var)}.\n")
-
+            var = encode(password)
 
 if __name__ == "__main__":
     main()
