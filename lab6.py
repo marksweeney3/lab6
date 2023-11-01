@@ -1,5 +1,5 @@
 
-
+# Gayathri Gunda
 # Mark Sweeney
 
 def encode(password):
@@ -16,6 +16,14 @@ def encode(password):
             result += str(new_num)
     return result
 
+
+def decode(password):
+    orginal_password = ""
+    for digit in password:
+        if digit.isdigit():
+            original_password += str((int(digit) - 3) % 10)
+    return original_password
+
 def main():
     var = ''
     while True:
@@ -31,6 +39,10 @@ def main():
             password = input("Please enter your password to code: ")
             print("Your password has been encoded and stored!\n")
             var = encode(password)
+        elif selection == 2:
+            decoded_password = decode(var)
+            print(f'The encoded password is {var}, and the original password is {decoded_password}.')
+
 
 if __name__ == "__main__":
     main()
