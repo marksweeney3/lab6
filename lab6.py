@@ -1,5 +1,7 @@
 
 
+# Mark Sweeney
+
 def encoder(password):
     result = ''
     for i in range(len(password)):
